@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent {
+                label 'LinuxAgent'
+        }
+        
     parameters { choice(name: 'ENV', choices: ['Dev', 'Qa', 'Prod'], description: '') }
     stages {
         stage("PARAM 1") {
