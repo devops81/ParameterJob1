@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage("PARAM 1") {
             steps {
-                build job: 'ParameterJob1', parameters: [string(name: 'ENV', value: "${params.ENV}")]
+                build job: 'ParameterJob2', parameters: [string(name: 'ENV', value: "${params.ENV}")]
             }
         }
     }
